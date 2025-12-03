@@ -31,10 +31,12 @@ The application is built using the following core technologies:
 ├── README.md
 ├── backend
 │   ├── models
+│   │   └── Developer.js
 │   ├── node_modules
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── routes
+│   │   └── developerRoutes.js
 │   └── server.js
 ├── frontend
 │   ├── .gitignore
@@ -44,25 +46,70 @@ The application is built using the following core technologies:
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── Components
+│   │   │   ├── DeveloperCard.jsx
+│   │   │   ├── DeveloperForm.jsx
+│   │   │   └── DeveloperList.jsx
+│   │   └── assets
 │   └── vite.config.js
 ```
+
+### Detailed List of Files
+
+#### backend/models/
+- `Developer.js`
+
+#### backend/routes/
+- `developerRoutes.js`
+
+#### backend/
+- `server.js`
+- `package.json`
+- `package-lock.json`
+
+#### frontend/
+- `.gitignore`
+- `README.md`
+- `eslint.config.js`
+- `index.html`
+- `package.json`
+- `package-lock.json`
+- `vite.config.js`
+
+#### frontend/src/
+- `App.css`
+- `App.jsx`
+- `index.css`
+- `main.jsx`
+
+#### frontend/src/Components/
+- `DeveloperCard.jsx`
+- `DeveloperForm.jsx`
+- `DeveloperList.jsx`
+
+#### frontend/src/assets/
+- (folder for static assets like images or icons)
 
 ### High-level Structure Overview
 
 - **backend/**  
   Contains all the server-side code for the application. This includes:
   - `server.js`: Main entry for the Express server.
-  - `models/`: Contains all mongoose models/schemas.
-  - `routes/`: API route definitions.
-  - `package.json` and `package-lock.json`: Declare Node dependencies and lock versions.
-  - `node_modules/`: All installed backend dependencies (excluded from repository).
+  - `models/`: Mongoose model (Developer.js).
+  - `routes/`: API route definitions (developerRoutes.js).
+  - `package.json` and `package-lock.json`: Backend dependencies.
+  - `node_modules/`: Installed backend dependencies (excluded from repository).
 - **frontend/**  
   Houses all the client-side code using React. Includes:
   - `src/`: Source code for React components, hooks, and utilities.
-  - `index.html`: HTML entry point for the React application.
-  - `package.json`, `package-lock.json`: Declare and lock frontend dependencies.
-  - `eslint.config.js` and `vite.config.js`: Configuration for linting and build tooling.
-  - `.gitignore`: Specifies files/folders for Git to ignore.
+  - `index.html`: HTML entry point for React.
+  - `package.json`, `package-lock.json`: Frontend dependencies.
+  - `eslint.config.js` and `vite.config.js`: Lint/build configuration.
+  - `.gitignore`: Git ignored files spec.
 - **README.md**  
   This file. Provides the description, usage, and structure details.
 
